@@ -1,0 +1,23 @@
+a=input("bir sayı giriniz :")
+b=input("bir sayı daha giriniz :")
+c=input("bir sayı daha giriniz :")
+d=input("bir sayı daha giriniz :")
+e=input("bir sayı daha giriniz :")
+f=input("bir sayı daha giriniz :")
+h=input("bir sayı daha giriniz :")
+temp=a
+a=d
+d=temp
+temp=b
+b=f
+f=temp
+temp=a
+a=h
+h=temp
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(h)

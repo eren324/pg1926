@@ -1,0 +1,50 @@
+<div style="width:800px; height: auto; margin:auto;" auto; text-align: center;>
+
+<form name="form1" method="post" action="">
+  <p>
+    <label for="birincisayi" style="color:0000CC">Birinci Sayı:</label>
+    <input type="text" name="birincisayi" value="<?php echo @$_POST['birincisayi']; ?>">
+  </p>
+  <p>
+    <label for="ikincisayi" style="color:CC9900" >İkinci Sayı:</label>
+    <input type="text" name="ikincisayi" value="<?php echo @$_POST['ikincisayi']; ?>">
+  </p>
+  <label for="birincisayi" style="color:0000CC">İşleminiz : <?php
+  if(intval($_POST['birincisayi']) > 0 AND intval($_POST['ikincisayi']) > 0){
+  	if (isset($_POST['topla']))
+{
+	echo $_POST['birincisayi'] + $_POST['ikincisayi'];
+}
+elseif(isset($_POST['cikar']))
+{
+	echo $_POST['birincisayi'] - $_POST['ikincisayi'];
+}
+
+elseif(isset($_POST['carp']))
+{
+	echo $_POST['birincisayi'] * $_POST['ikincisayi'];
+}
+
+elseif(isset($_POST['bol']))
+{
+	echo $_POST['birincisayi'] / $_POST['ikincisayi'];
+}
+  }
+  else {
+  	echo "Lütfen Sayı Giriniz";
+  }
+
+?></label>
+  <p>
+    <input type="submit" name="topla" value="Topla" style="color:0000CC" type="button"></br>
+    <input type="submit" name="cikar"  value="Çıkar" style="color:000099" type="button"></br>
+    <input type="submit" name="carp" value="Çarp" style="color:0000FF" type="button"></br>
+    <input type="submit" name="bol" value="Böl" style="color:990000" type="button"></br>
+   
+
+  </p>
+</form>
+
+
+</div>
+

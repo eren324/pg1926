@@ -1,0 +1,19 @@
+<?php
+$rastgele = rand(1,100);
+$asal_sayilar = "";
+
+for($i=2;$i<=$rastgele;$i++){
+	$kontrol = 0; 
+	for($k = 2;$k<$i;$k++){
+		
+		if($i % $k == 0){
+			$kontrol = 1;
+		}	
+	}
+	if($kontrol==0){
+		$asal_sayilar.= "$i, ";
+	}
+}
+echo "Rastele sayı: $rastgele <br> 
+	Asal sayılar: $asal_sayilar";
+  ?>

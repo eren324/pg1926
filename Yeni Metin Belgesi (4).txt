@@ -1,0 +1,20 @@
+<?php
+date_default_timezone_set('Europe/Istanbul');
+$saat = date('H')
+
+if($saat > 06 || $saat < 10){
+echo "günaydın";
+}
+elseif($saat > 10 || $saat < 17){
+    echo"iyi günler";
+}
+elseif($saat > 17 || $saat < 20){
+    echo"iyi akşamlar";
+}
+elseif($saat > 20 || $saat < 00){
+    echo"iyi geceler";
+}
+else;
+    echo"iyi günler";
+?>
+
