@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Para Üstü Girin: <input type="text" name="sayi">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $total = $_POST["sayi"] / 100 ;
+    echo floor($total)." tane 1 lira"."<br>";
+
+    $_POST["sayi"] -= floor($total) * 100;
+    $total = $_POST["sayi"] / 50;
+    echo floor($total)." tane 50 krş"."<br>";
+
+    $_POST["sayi"] -= floor($total) * 50;
+    $total = $_POST["sayi"] / 25;
+    echo floor($total)." tane 25 krş"."<br>";
+
+    $_POST["sayi"] -= floor($total) * 25;
+    $total = $_POST["sayi"] / 10;
+    echo floor($total)." tane 10 krş"."<br>";
+
+    $_POST["sayi"] -= floor($total) * 10;
+    $total = $_POST["sayi"] / 1;
+    echo floor($total)." tane 1 krş"."<br>";
+
+
+
+}
+?>
